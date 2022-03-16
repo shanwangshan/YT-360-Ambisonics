@@ -1,1 +1,28 @@
 #+TITLE: YT-360 Ambisonics clips
+
+ In this repo, we upload the clips which passed Ambisonics test. Details could be found below.
+
+** Why to do such test?
+   *
+** How to do the test?
+\begin{equation}
+    \abs*{\frac{E_\mathrm{xyz}}{E_\mathrm{w}}-1} \leq \tau
+\label{eq:test}
+\end{equation}
+** Briefs about the ambisonics.txt file
+   - There are two columns in the text file; the first column shows the Youtube ID with 11 strings, and the second column gives the starting time of the youtube video. Each clip lasts for 10 seconds.
+   - youtube-dl is one of the great tool to download the video and audio from YouTube, e.g.,
+     #+begin_src sh
+       youtube-dl -F https://www.youtube.com/watch\?v\=CEA_q7cKgMI
+     #+end_src
+
+    - One can download ambisoncs with format 327 (.m4a) using the command below
+      #+begin_src sh
+	youtube-dl -f 327  https://www.youtube.com/watch\?v\=CEA_q7cKgMI
+       #+end_src
+
+     - the combination of using ffmpeg and youtube-dl could download the audio and cut the clip of interest.
+       #+begin_src sh
+       ffmpeg -ss  -i $(youtube-dl -f 18 --get-url)
+        #+end_src
+** Acknowledgements
