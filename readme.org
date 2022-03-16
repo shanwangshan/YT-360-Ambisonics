@@ -7,7 +7,10 @@
 ** How to do the test?
 
 
-   $\abs*{\frac{E_\mathrm{xyz}}{E_\mathrm{w}}-1} \leq \tau$
+\begin{eqaution}
+  \abs*{\frac{E_\mathrm{xyz}}{E_\mathrm{w}}-1} \leq \tau
+ \end{equation}
+
 
 ** Briefs about the ambisonics.txt file
    - There are two columns in the text file; the first column shows the Youtube ID with 11 strings, and the second column gives the starting time of the youtube video. Each clip lasts for 10 seconds.
