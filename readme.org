@@ -3,19 +3,22 @@
  In this repo, we upload the clips which passed Ambisonics test. Details could be found below.
 
 ** Briefs about the ambisonics.txt file
+
    - There are two columns in the text file; the first column shows the Youtube ID with 11 strings, and the second column gives the starting time of the youtube video. Each clip lasts for 10 seconds.
-   - youtube-dl is one of the great tool to download the video and audio from YouTube, e.g.,
+
+   - youtube-dl is one of the great tool to download the video and audio from YouTube. The command below will list all the possible format one can download.
+
      #+begin_src sh
-       youtube-dl -F https://www.youtube.com/watch\?v\=CEA_q7cKgMI
+      youtube-dl -F https://www.youtube.com/watch\?v\=CEA_q7cKgMI
      #+end_src
+
    - One can download ambisoncs with format 327 (.m4a) using the command below
-      #+begin_src sh
-	youtube-dl -f 327  https://www.youtube.com/watch\?v\=CEA_q7cKgMI
-       #+end_src
+     #+begin_src sh
+      youtube-dl -f 327  https://www.youtube.com/watch\?v\=CEA_q7cKgMI
+      #+end_src
    - the combination of using ffmpeg and youtube-dl could download the audio and cut the clip of interest.
-       #+begin_src sh
-       ffmpeg -ss  -i $(youtube-dl -f 18 --get-url)
-        #+end_src
+
 ** Acknowledgements
    These clips are part of YT-360 dataset collected by Morgado et al from the publication below.
+
    {Learning Representations from Audio-Visual Spatial Alignment. Pedro Morgado*, Yi Li*, Nuno Vasconcelos. Advances in Neural Information Processing Systems (NeurIPS), 2020.}
