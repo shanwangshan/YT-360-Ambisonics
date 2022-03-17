@@ -2,16 +2,6 @@
 
  In this repo, we upload the clips which passed Ambisonics test. Details could be found below.
 
-** Why to do such test?
-   *
-** How to do the test?
-
-
-\begin{eqaution}
-  \abs*{\frac{E_\mathrm{xyz}}{E_\mathrm{w}}-1} \leq \tau
- \end{equation}
-
-
 ** Briefs about the ambisonics.txt file
    - There are two columns in the text file; the first column shows the Youtube ID with 11 strings, and the second column gives the starting time of the youtube video. Each clip lasts for 10 seconds.
    - youtube-dl is one of the great tool to download the video and audio from YouTube, e.g.,
@@ -27,3 +17,5 @@
        ffmpeg -ss  -i $(youtube-dl -f 18 --get-url)
         #+end_src
 ** Acknowledgements
+   These clips are part of YT-360 dataset collected by Morgado et al from the publication below.
+   {Learning Representations from Audio-Visual Spatial Alignment. Pedro Morgado*, Yi Li*, Nuno Vasconcelos. Advances in Neural Information Processing Systems (NeurIPS), 2020.}
